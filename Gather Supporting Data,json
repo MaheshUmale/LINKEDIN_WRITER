@@ -1,0 +1,69 @@
+{
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "Start the research"
+        },
+        {
+          "text": "\nDo the research according about this topic:\n\n---\n\nConduct in-depth web research to gather comprehensive supporting data, facts, and credible sources relevant to the selected article title and angle. The research should provide information to back the key insight and topic, including summaries of any relevant charts and graphs, and mention sources/reference links for authenticity.\n\nResearch query:\n\nHere are several distinct article titles and angles tailored to resonate with a CTO's strategic priorities regarding Enterprise AI ROI:\n\n1.  **Title:** The CTO's Playbook: Quantifying Enterprise AI's Tangible and Intangible ROI\n    *   **Angle:** This article provides a strategic framework for CTOs to accurately measure and communicate the full spectrum of value from enterprise AI investments, including direct financial returns, operational efficiencies, and the often-overlooked intangible benefits like enhanced innovation capacity and improved decision-making. It will outline key methodologies and metrics for a comprehensive ROI assessment, enabling CTOs to articulate AI's value beyond immediate costs.\n\n2.  **Title:** From Code to Cash: How CTOs Can Prove Enterprise AI's Financial Impact on Customer Experience\n    *   **Angle:** Geared for the CTO, this piece details how strategic enterprise AI deployments, particularly those focused on customer experience transformation, translate directly into measurable business value and financial returns. It will explore specific use cases, performance indicators, and data-driven approaches to demonstrate the compelling ROI of AI-driven CX enhancements to the executive board, linking technology innovation directly to revenue and customer loyalty.\n\n3.  **Title:** Beyond Hype: CTO's Guide to Metrics-Driven ROI for Enterprise AI Initiatives\n    *   **Angle:** This article equips CTOs with the essential metrics and strategic frameworks needed to move beyond conceptual benefits and rigorously quantify the financial and operational ROI of enterprise AI projects. It will focus on establishing clear KPIs, benchmarks, and reporting mechanisms to de-risk investments, ensure strategic alignment, and validate AI's contribution to core business objectives, providing a practical guide for demonstrating accountability and value.\n\n4.  **Title:** Architecting Value: Building the Ironclad Business Case for Enterprise AI as a CTO\n    *   **Angle:** This piece offers CTOs a comprehensive guide to developing a robust business case for enterprise AI, moving beyond technical specifications to articulate its profound strategic value and quantifiable ROI. It will cover frameworks for assessing financial gains, competitive advantages, and future-proofing, providing CTOs with the language and data needed to secure executive buy-in, optimize resource allocation, and strategically position AI within the enterprise.\n  \n\n---\n"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "tools": [
+    {
+      "functionDeclarations": [
+        {
+          "name": "Search_Web",
+          "description": "Given a query, searches the Web with Google Search.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "The query to use with which to search the Web"
+              }
+            }
+          }
+        },
+        {
+          "name": "Get_Webpage",
+          "description": "Given a URL of a webpage, returns its content as Markdown with a list of links and other metadata.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Google Places API search query, typically formulated as [type of place] near [location]"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "systemInstruction": {
+    "parts": [
+      {
+        "text": "You are a researcher.\n\nYour job is to use the provided query to produce raw research that will be later turned into a detailed research report.\nYou are tasked with finding as much of relevant information as possible.\n\nYou examine the conversation context so far and come up with the first step to produce the report, \nusing the conversation context as the the guide of steps taken so far and the outcomes recorded.\n\nYou do not ask user for feedback. You do not try to have a conversation with the user. \nYou know that the user will only ask you to proceed to next step.\n\nLooking back at all that you've researched and the query/research plan, do you have enough to produce the detailed report? If so, you are done.\n\nNow, provide a response. Your response must contain two parts:\nThought: a brief plain text reasoning why this is the right first step and a description of what you will do in plain English.\nAction: invoking the tools are your disposal, more than one if necessary. If you're done, do not invoke any tools."
+      }
+    ],
+    "role": "user"
+  },
+  "safetySettings": [
+    {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_NONE"
+    },
+    {
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_NONE"
+    },
+    {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_NONE"
+    }
+  ]
+}
